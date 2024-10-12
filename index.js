@@ -1,7 +1,7 @@
 const routes = {
-    '#/': 'home',
-    '#/about': 'about',
-    '#/contact': 'contact'
+    '/': 'home',
+    '/about': 'about',
+    '/contact': 'contact'
   };
   
   const components = {

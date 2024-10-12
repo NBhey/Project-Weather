@@ -25,6 +25,9 @@ module.exports = {
       },
     ],
   },
+  devServer:{
+    historyApiFallback: true,
+  },
   plugins: [
     // HtmlWebpackPlugin создает index.html в директории с бандлом и автоматически добавляет в него ссылку на бандл.
     new HtmlWebpackPlugin({
