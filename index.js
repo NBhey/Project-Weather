@@ -1,7 +1,7 @@
 const routes = {
-    '/': 'home',
-    '/about': 'about',
-    '/contact': 'contact'
+    '#/': 'home',
+    '#/about': 'about',
+    '#/contact': 'contact'
   };
   
   const components = {
@@ -19,8 +19,8 @@ const routes = {
     document.getElementById('root').innerHTML = content;
   }
   
-  window.addEventListener('popstate', () => {
-    router(window.location.pathname);
+  window.addEventListener('hashchange', () => {
+    router(window.location.hash);
   });
   
   // Обработка кликов на ссылки
@@ -35,4 +35,4 @@ const routes = {
     });
   });
   
-  router(window.location.pathname);
+  router(window.location.hash);
