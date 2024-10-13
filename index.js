@@ -1,7 +1,11 @@
 import router from './src/js/router.js'
-import style from './src/style/style.css'
-import  getIp from './src/js/ip.js'
+// возвращает объект с данными пользователя
+import  getIp from './src/js/ip.js' 
+// возвращает 
 import getWeather from './src/js/getWeatherCityData.js'
-const test = await getIp()
+
+import style from './src/style/style.css'
+
+
+const test = await getWeather(await getIp())
 console.log(test)
-console.log(typeof(getIp()))

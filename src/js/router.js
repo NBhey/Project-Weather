@@ -11,9 +11,9 @@ const routes = {
   };
   
   function router(url) {
-    console.log({url});
+    // console.log({url});
     const route = routes[url] || 'home';
-    console.log({route});
+    // console.log({route});
     const content = components[route]();
     // console.log(content)
     document.getElementById('root').innerHTML = content;
