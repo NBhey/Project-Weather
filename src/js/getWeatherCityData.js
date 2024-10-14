@@ -17,6 +17,6 @@ export default async function getWeather(city) {
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=ru&appid=${API_KEY}&units=metric`;
   const response = await fetch(url);
   const data = await response.json();
-  console.log(data);
-  return [Math.round(data.main.temp), data.weather[0].icon, data.coord];
+  // return [Math.round(data.main.temp), data.weather[0].icon, data.coord];
+  return data;
 }
