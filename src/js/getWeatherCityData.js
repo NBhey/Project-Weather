@@ -1,5 +1,5 @@
 const API_KEY = "fd185eec875c277bc16bccdb3629b6af";
-export default async function getWeather(city) {
+export default async function getWeatherCityData(city) {
   let latitude;
   let longitude;
   if (typeof city === "object") {
