@@ -1,13 +1,16 @@
+import initMap from "./map";
 const routes = {
     '#/': 'home',
     '#/about': 'about',
-    '#/contact': 'contact'
+    '#/contact': 'contact',
+    // '#/map': 'map'
   };
   
   const components = {
     home: () => '<h1>Welcome to the homepage!</h1>',
     about: () => '<h1>About us</h1>',
-    contact: () => '<h1>Contact us</h1>'
+    contact: () => '<h1>Contact us</h1>',
+    // map: () => initMap()
   };
   
   function router(url) {
