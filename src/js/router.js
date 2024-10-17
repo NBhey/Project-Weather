@@ -1,16 +1,19 @@
 import initMap from "./map";
+import getWeatherCityData from './getWeatherCityData.js'
+import  getIp from './ip.js' 
+
 const routes = {
     '#/': 'home',
     '#/about': 'about',
     '#/contact': 'contact',
-    // '#/map': 'map'
+    '#/test': 'test'
   };
   
   const components = {
     home: () => '<h1>Welcome to the homepage!</h1>',
     about: () => '<h1>About us</h1>',
     contact: () => '<h1>Contact us</h1>',
-    // map: () => initMap()
+    test: async () => `<div  style="width: 600px; height: 400px">${await initMap(await getWeatherCityData(await getIp()))}</div>`
   };
   
   function router(url) {

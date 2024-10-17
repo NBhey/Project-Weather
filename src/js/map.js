@@ -1,5 +1,4 @@
-
-export default async function initMap() {
+export default async function initMap(city) {
     // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
     await ymaps3.ready;
 
@@ -14,7 +13,7 @@ export default async function initMap() {
         {
             location: {
                 // Координаты центра карты
-                center: [37.588144, 55.733842],
+                center: [city.coord.lon, city.coord.lat],
 
                 // Уровень масштабирования
                 zoom: 10
