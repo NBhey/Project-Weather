@@ -8,7 +8,7 @@ export default async function initMap(city) {
     const map = new YMap(
         // Передаём ссылку на HTMLElement контейнера
         document.getElementById('map'),
-
+        
         // Передаём параметры инициализации карты
         {
             location: {

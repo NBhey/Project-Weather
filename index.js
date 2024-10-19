@@ -9,8 +9,8 @@ import showCityData from './src/js/showCityData.js'
 
 import initMap from './src/js/map.js'
 
-export const test = await getWeatherCityData(await getIp())
-console.log(test)
-console.log(typeof test)
-showCityData(test)
+// export const test = await getWeatherCityData(await getIp())
+// console.log(test)
+// console.log(typeof test)
+// showCityData(test)
 // await initMap(test)
