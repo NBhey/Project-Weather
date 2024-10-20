@@ -6,23 +6,18 @@ const routes = {
   "#/": "home",
   "#/about": "about",
   "#/contact": "contact",
-  // "#/test": "test",
 };
 
 const components = {
-  home:  (el) => (
-    el.innerHTML = `<h1>Welcome to the homepage!</h1>
-    
-    `),
-  about: async (el) =>  (el.innerHTML = `<h1>About us</h1>
+  home: (el) =>
+    (el.innerHTML = `<h1>Welcome to the homepage!</h1>`),
+  about: async (el) => (
+    (el.innerHTML = `<h1>About us</h1>
     <div id='map' style="width: 600px; height: 400px"></div>
-    `,
-    await initMap(await getWeatherCityData(await getIp())) 
+    `),
+    await initMap(await getWeatherCityData(await getIp()))
   ),
   contact: (el) => (el.innerHTML = "<h1>Contact us</h1>"),
-  // test: async (el) => {
-  //   el.innerHTML = `hi`;
-  // },
 };
 
 function router(url) {
