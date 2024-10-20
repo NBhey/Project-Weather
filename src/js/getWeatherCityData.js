@@ -18,5 +18,6 @@ export default async function getWeatherCityData(city) {
   const response = await fetch(url);
   const data = await response.json();
   // return [Math.round(data.main.temp), data.weather[0].icon, data.coord];
+  console.log(data)
   return data;
 }

@@ -17,5 +17,5 @@ document.querySelector('.btn').addEventListener("click", async (e) => {
     let value = document.querySelector('.input').value.trim().toLowerCase();
     
     changeCity(value)
-      document.querySelector('.input').value = "";
+    document.querySelector('.input').value = "";
   });
