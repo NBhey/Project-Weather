@@ -14,10 +14,11 @@ export default async function getWeatherCityData(city) {
     longitude = parseResCity[0].lon;
   }
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=ru&appid=${API_KEY}&units=metric`;
+  const url = `https://ru.api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=ru&appid=${API_KEY}&units=metric`;
+  // const url = `https://ru.api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&exclude={part}&appid=${API_KEY}&units=metric`;
+
   const response = await fetch(url);
   const data = await response.json();
   // return [Math.round(data.main.temp), data.weather[0].icon, data.coord];
-  console.log(data)
   return data;
 }
