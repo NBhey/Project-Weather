@@ -1,17 +1,13 @@
 import { homeRout } from "./routes/home.route.js";
-import showCityData from "./showCityData.js";
 
-import initMap from "./map";
-import getWeatherCityData from "./getWeatherCityData.js";
-import getIp from "./ip.js";
 const routes = {
   "#/": "home",
-  "#/more": "more",
+  "#/map": "map",
 };
 
 const components = {
-  home: homeRout,
-  more: (el) => (el.innerHTML = "<h1>Contact us</h1>"),
+  home: (el) => (el.innerHTML = "<h1>Contact us</h1>"),
+  map: homeRout,
 };
 
 async function router(url) {
@@ -31,7 +27,6 @@ links.forEach((link) => {
     const url = link.getAttribute("href"); // Получаем URL из ссылки
     history.pushState({}, "", url); // Добавляем URL в историю браузера
     router(url);
-    await initMap(await getWeatherCityData(await getIp()))
   });
 });
 

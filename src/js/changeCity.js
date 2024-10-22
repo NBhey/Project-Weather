@@ -3,9 +3,9 @@ import initMap from "./map";
 
 let img = document.querySelector('img');
 export default async function changeCity(value){
-    const dataCIty = await getWeatherCityData(value);
-    document.querySelector('.city').textContent = `${dataCIty.name}`;
-    document.querySelector('.temperature').textContent = `${dataCIty.main.temp} °C`;
-    img = `http://openweathermap.org/img/wn/${dataCIty.weather[0].icon}@2x.png`
-    await initMap(dataCIty)
+    const dataCity = await getWeatherCityData(value);
+    document.querySelector('.city').textContent = `${dataCity.name}`;
+    document.querySelector('.temperature').textContent = `${dataCity.main.temp} °C`;
+    img = `http://openweathermap.org/img/wn/${dataCity.weather[0].icon}@2x.png`
+    await initMap(dataCity)
 }
