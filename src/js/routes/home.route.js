@@ -5,5 +5,5 @@ import getIp from "../ip.js";
 
 export const homeRout = async (el) => {
     el.innerHTML = `<div id='map'></div>`
-    await initMap(await getWeatherCityData('Москва'))
+    await initMap(await getWeatherCityData(await getIp()))
 }

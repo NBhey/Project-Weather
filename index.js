@@ -5,10 +5,10 @@ import getWeatherCityData from './src/js/getWeatherCityData.js'
 import showCityData from './src/js/showCityData.js'
 import changeCity from './src/js/changeCity.js'
 import initMap from './src/js/map.js'
+const test = await getWeatherCityData(await getIp())
 
-export const test = await getWeatherCityData(await getIp())
-// console.log(test)
-// console.log(typeof test)
+// const test = await getWeatherCityData(await getIp())
+
 showCityData(test)
 // await initMap(test)
 

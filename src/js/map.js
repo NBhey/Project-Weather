@@ -28,7 +28,7 @@ let Map;
 // }
 import * as ymaps3 from 'ymaps3';
 export default async function initMap(city) {
- console.log(1)
+ 
 const {YMap, YMapDefaultSchemeLayer} = ymaps3;
 // if (!Map) {
 Map = new YMap(
@@ -40,9 +40,5 @@ Map = new YMap(
       }
   }
 );
-
 Map.addChild(new YMapDefaultSchemeLayer());
-// } else {
-//       Map.setLocation({ center: [city.coord.lon, city.coord.lat], zoom: 10 });
-//     }
 }
