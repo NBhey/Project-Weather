@@ -3,9 +3,12 @@ import getWeatherCityData from "../getWeatherCityData.js";
 import getIp from "../ip.js";
 
 
-export const homeRout = async (el) => {
-    // let element = document.querySelector('.city').textContent
-    // console.log(element)
+export const homeRout = async (el, changeEl) => {
     el.innerHTML = `<div id='map'></div>`
-    // await initMap(await getWeatherCityData(await getIp()))
+    if (changeEl) {
+        await initMap(await getWeatherCityData(changeEl.textContent))
+    } else {
+        await initMap(await getWeatherCityData(await getIp()))
+    }
+    
 }

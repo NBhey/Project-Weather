@@ -1,4 +1,5 @@
 export default function showCityData(cityData){
+    console.log(document.querySelector('.city'))
     const element = document.createElement('div');
     element.classList.add('content__data-city')
     element.innerHTML = `
@@ -11,4 +12,6 @@ export default function showCityData(cityData){
     const inputElement = document.querySelector('.content__request');
 
     parentElement.insertBefore(element,inputElement)
+    console.log(document.querySelector('.city'))
+
 }

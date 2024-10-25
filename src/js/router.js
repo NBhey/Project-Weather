@@ -1,5 +1,4 @@
 import { homeRout } from "./routes/home.route.js";
-
 const routes = {
   "#/": "home",
   "#/map": "map",
@@ -12,7 +11,7 @@ const components = {
 
 async function router(url) {
   const route = routes[url] || "home";
- await components[route](document.getElementById("root"));
+ await components[route](document.getElementById("root"), document.querySelector('.city'));
 }
 
 window.addEventListener("hashchange", () => {
