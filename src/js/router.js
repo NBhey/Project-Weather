@@ -1,11 +1,13 @@
 import { homeRout } from "./routes/home.route.js";
+import { moreRout } from "./routes/more.route.js";
+
 const routes = {
   "#/": "home",
   "#/map": "map",
 };
 
 const components = {
-  home: (el) => (el.innerHTML = "<h1>Contact us</h1>"),
+  home: moreRout,
   map: homeRout,
 };
 
