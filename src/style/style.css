@@ -88,4 +88,6 @@ body {
 
 .more__list {
   list-style-type: none;
+  text-align: center;
+  padding-top: 50px; 
 }
