@@ -7,7 +7,7 @@ export default async function getWeatherCityData(city) {
     longitude = city.longitude;
   } else {
     const responseCity = await fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${API_KEY}`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${API_KEY}`
     );
     const parseResCity = await responseCity.json();
     latitude = parseResCity[0].lat;
