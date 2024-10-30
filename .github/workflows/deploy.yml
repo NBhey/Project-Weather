@@ -16,4 +16,4 @@ jobs:
       - run: npm ci
       - run: npm run build:prod
       # Deploy
-      - run: cd app && rsync -e "ssh -p 20022 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . m71516@hostru04.fornex.org:/home/m71516/public_html/blog.maxgraph.ru
+      - run: rsync -e "ssh -p 20022 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . ogmarcwb_nbhey@nbhey.ru:/nbhey.ru/public_html
