@@ -8,7 +8,6 @@ import { saveList, readList } from "./src/js/localeStorage";
 import { renderCityList } from "./src/js/renderCityList.js";
 
 const cityList = await readList();
-console.log(cityList);
 renderCityList(document.querySelector('.city-list'),cityList)
 await showCityData(await getWeatherCityData(await getIp()));
 
