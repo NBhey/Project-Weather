@@ -8,6 +8,13 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
     
+    - name: Install Packages
+      run: |
+        npm ci
+
+    - name: Build prod
+      run: |
+        npm run build:prod
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
