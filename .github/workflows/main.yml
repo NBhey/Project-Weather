@@ -11,6 +11,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ogmarcwb_nbhey@nbhey.ru:/home/o/ogmarcwb_nbhey/nbhey.ru/public_html
+        server: ogmarcwb_nbhey@nbhey.ru
         username: ogmarcwb_nbhey
         password: ${{ secrets.ftp_password }}
