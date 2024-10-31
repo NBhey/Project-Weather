@@ -16,4 +16,4 @@ jobs:
       - run: npm ci
       - run: npm run build:prod
       # Deploy
-      - run: rsync -e "ssh -p 20022 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . ogmarcwb_nbhey@geist:/nbhey.ru/public_html
+      - run: rsync -e "ssh -p 20022 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . ogmarcwb_nbhey@geist
