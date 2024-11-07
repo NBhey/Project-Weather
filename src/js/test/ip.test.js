@@ -22,9 +22,7 @@ describe("test for getIp function", () => {
       json: jest.fn().mockResolvedValue(mockObject),
     });
   });
-  global.fetch = jest.fn().mockResolvedValue({
-    json: jest.fn().mockResolvedValue(mockObject),
-  });
+  
   test("Is a function", () => {
     expect(getIp).toBeInstanceOf(Function);
   });

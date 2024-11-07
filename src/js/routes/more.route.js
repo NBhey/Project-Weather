@@ -5,10 +5,8 @@ export const moreRout = async (el, changeEl) => {
   let data;
   if (changeEl) {
     data = await getWeatherCityData(changeEl.textContent);
-    console.log('я if', data)
   } else {
     data = await getWeatherCityData(await getIp());
-    console.log('я else', data)
   }
   el.innerHTML = `<ul class='more__list'>
     <li>Ощущается как: ${data.main.feels_like} °C</li>

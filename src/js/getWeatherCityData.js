@@ -10,6 +10,7 @@ export default async function getWeatherCityData(city) {
       `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${API_KEY}`
     );
     const parseResCity = await responseCity.json();
+    console.log(parseResCity)
     latitude = parseResCity[0].lat;
     longitude = parseResCity[0].lon;
   }
