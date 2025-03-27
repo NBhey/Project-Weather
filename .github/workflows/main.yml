@@ -1,0 +1,23 @@
+on: pull_request
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    
+    - name: Install Packages
+      run: |
+        npm ci
+
+    - name: Build prod
+      run: |
+        npm run build:prod
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ogmarcwb.beget.tech
+        username: ogmarcwb_nbhey
+        password: ${{ secrets.ftp_password }}

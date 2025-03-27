@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="main__city">
+        <form action class="content__request">
+          <input class="input" type="search" placeholder="Введите город" />
+          <button class="btn">
+            <svg
+              width="24"
+              height="20"
+              viewBox="0 -1 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                stroke="#545454"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M20.9999 21L16.6499 16.65"
+                stroke="#545454"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </form>
+        <ul class="city-list"></ul>
+      </section>
+      <section class="rout-section">
+        <nav class="rout-navigation">
+          <a href="#/">Подробнее</a>
+          <a href="#/map">Карта</a>
+        </nav>
+        <div id="root"></div>
+      </section>
+    </main>
+  </body>
+</html>
