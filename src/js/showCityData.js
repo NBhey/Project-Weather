@@ -4,7 +4,7 @@ export default function showCityData(cityData){
     element.innerHTML = `
     <h2 class="city">${cityData.name}</h2>
     <p class="temperature">${Math.round(cityData.main.temp)} °C</p>
-    <img src="http://openweathermap.org/img/wn/${cityData.weather[0].icon}@2x.png">
+    <img src="https://openweathermap.org/img/wn/${cityData.weather[0].icon}@2x.png">
     `;
 
     const parentElement = document.querySelector('.main__city');
