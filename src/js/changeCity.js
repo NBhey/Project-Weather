@@ -8,7 +8,7 @@ export default async function changeCity(value) {
   document.querySelector(
     ".temperature"
   ).textContent = `${dataCity.main.temp} °C`;
-  img = `http://openweathermap.org/img/wn/${dataCity.weather[0].icon}@2x.png`;
+  img = `https://openweathermap.org/img/wn/${dataCity.weather[0].icon}@2x.png`;
   if (document.querySelector("#map")) {
     document.querySelector("#map").children[0].remove();
     await initMap(dataCity);
